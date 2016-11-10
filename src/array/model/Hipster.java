@@ -9,5 +9,12 @@ public class Hipster
 	{
 		this.name = name;
 	}
+	
+	public String toString()
+	{
+		String description = "My name is " + name;
+		
+		return description;
+	}
 
 }
