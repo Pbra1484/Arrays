@@ -1,10 +1,10 @@
 package array.controller;
 
 import array.model.Hipster;
-//import array.view.HipsterFrame;
+import array.view.HipsterFrame;
 public class ArrayController
 {
-//	private HipsterFrame appFame;
+	private HipsterFrame appFrame;
 	private int[] numbers;
 	private String [] words = {"This ","is the ","second hiptser ","level: ","initialization ","lists"};
 	private Hipster [] hipsters;
@@ -12,9 +12,14 @@ public class ArrayController
 	
 	public ArrayController()
 	{
-		numbers = new int [20];
+		thirdLevelHipster();
 		
 		hipsters = new Hipster[6];
+		appFrame = new HipsterFrame(this);
+	}
+	private void thirdLevelHipster()
+	{
+		numbers = new int [] {0,1,2,3,4,5,6,7,8,9,0,9,8,7,6,5,4,3,2,1,0};
 	}
 	
 	public void start()
@@ -39,5 +44,8 @@ public class ArrayController
 			System.out.print(tempInt + ", ");
 		}
 	}
+	public Hipster[] getHipsters(){return hipsters;}
+	public String[] getWords(){return words;}
+	public int[] getNumbers(){return numbers;}
 
 }
