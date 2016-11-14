@@ -15,6 +15,12 @@ public class ArrayController
 		thirdLevelHipster();
 		
 		hipsters = new Hipster[6];
+		
+		for(int index = 0; index < hipsters.length; index++)
+		{
+			hipsters[index] = new Hipster("hipster # " + index);
+		}
+		
 		appFrame = new HipsterFrame(this);
 	}
 	private void thirdLevelHipster()
@@ -24,10 +30,7 @@ public class ArrayController
 	
 	public void start()
 	{
-		for(int index = 0; index < hipsters.length; index++)
-		{
-			hipsters[index] = new Hipster("hipster # " + index);
-		}
+	
 		
 		for(Hipster currentHipster : hipsters)
 		{

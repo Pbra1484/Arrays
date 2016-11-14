@@ -5,6 +5,7 @@ import array.controller.ArrayController;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 public class HipsterPanel extends JPanel
 {
 	private ArrayController baseController;
@@ -50,7 +51,7 @@ public class HipsterPanel extends JPanel
 		{
 			public void actionPerfomed(ActionEvent selection)
 			{
-				String selectedText = baseController.getWords()[dropDown.detSelectedIndex()];
+				String selectedText = baseController.getHipsters()[dropDown.getSelectedIndex()];
 				wordsLabel.setText(selectedText);
 			}
 		});
