@@ -50,5 +50,13 @@ public class ArrayController
 	public Hipster[] getHipsters(){return hipsters;}
 	public String[] getWords(){return words;}
 	public int[] getNumbers(){return numbers;}
+	
+	public void impactHipsters()
+	{
+		for(Hipster currentHipster : hipsters)
+		{
+			currentHipster.calculateHipsterRank(100);
+		}
+	}
 
 }

@@ -51,11 +51,20 @@ public class HipsterPanel extends JPanel
 		{
 			public void actionPerfomed(ActionEvent selection)
 			{
-				String selectedText = baseController.getHipsters()[dropDown.getSelectedIndex()];
+				String selectedText = baseController.getHipsters()[dropDown.getSelectedIndex()].toString();
 				wordsLabel.setText(selectedText);
 			}
 		});
 		
+		myButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				baseController.impactHipsters();
+				repaint();
+			}
+		
+		});
 	}
 
 }
